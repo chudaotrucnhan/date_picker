@@ -73,6 +73,7 @@ Future<DateTime?> showDatePickerDialog({
   String? nextPageSemanticLabel,
   Color? backgroundColor = Colors.white,
 }) async {
+  FocusManager.instance.primaryFocus?.unfocus();
   return showDialog<DateTime>(
     context: context,
     barrierColor: barrierColor,
