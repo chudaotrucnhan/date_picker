@@ -71,6 +71,7 @@ Future<DateTime?> showDatePickerDialog({
   bool centerLeadingDate = false,
   String? previousPageSemanticLabel,
   String? nextPageSemanticLabel,
+  Color? backgroundColor = Colors.white,
 }) async {
   return showDialog<DateTime>(
     context: context,
@@ -95,6 +96,7 @@ Future<DateTime?> showDatePickerDialog({
         return Padding(
           padding: padding,
           child: Dialog(
+            backgroundColor: backgroundColor,
             insetPadding: EdgeInsets.zero,
             child: SizedBox(
               width: width ?? size.width,
